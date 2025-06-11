@@ -6,7 +6,7 @@
 /*   By: alborghi <alborghi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 10:43:28 by alborghi          #+#    #+#             */
-/*   Updated: 2025/06/10 10:49:38 by alborghi         ###   ########.fr       */
+/*   Updated: 2025/06/11 16:23:33 by alborghi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ float	average(const int *arr, int size)
 
 	sum = 0;
 	if (size <= 0 || arr == NULL)
-		return (sum);
+		return (sum / 1);
 	div = size;
 	for (int i = 0; i < size; i++)
 	{

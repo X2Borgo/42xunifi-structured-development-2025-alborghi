@@ -6,7 +6,7 @@
 /*   By: alborghi <alborghi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 12:43:28 by alborghi          #+#    #+#             */
-/*   Updated: 2025/06/10 17:27:01 by alborghi         ###   ########.fr       */
+/*   Updated: 2025/06/11 16:15:58 by alborghi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,26 +71,6 @@ FSNode *get_sibling(const FSNode *node)
 		return NULL;
 	return node->parent->children;
 }
-
-/* void	print_children(const FSNode *parent)
-{
-	if (!parent || !parent->children)
-		return;
-	FSNode *child;
-	child = parent->children;
-	printf("Children of %s:\n", parent->name);
-	while (child)
-	{
-		printf("Child: %s, Size: %d\n", child->name, child->size);
-		child = child->next_sibling;
-	}
-	child = parent->children;
-	while (child)
-	{
-		print_children(child);
-		child = child->next_sibling;
-	}
-} */
 
 int main(void)
 {

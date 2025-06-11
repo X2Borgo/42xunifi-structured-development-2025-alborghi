@@ -6,7 +6,7 @@
 /*   By: alborghi <alborghi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 17:32:38 by alborghi          #+#    #+#             */
-/*   Updated: 2025/06/11 16:40:29 by alborghi         ###   ########.fr       */
+/*   Updated: 2025/06/11 16:42:56 by alborghi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void	append_password(const char *new_pw, PasswordHistory *history)
 		else
 			break;
 	}
-	history->passwords[0] = new_pw;
+	history->passwords[0] = (char *)new_pw;
 }
 
 PwStatus validate_password(const char *new_pw, PasswordHistory *history)

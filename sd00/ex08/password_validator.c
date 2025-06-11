@@ -6,7 +6,7 @@
 /*   By: alborghi <alborghi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 13:46:50 by alborghi          #+#    #+#             */
-/*   Updated: 2025/06/11 11:37:11 by alborghi         ###   ########.fr       */
+/*   Updated: 2025/06/11 16:43:09 by alborghi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,5 @@ int main(void)
 	printf("new: %s -> %d\n", empty_pw, validate_password(empty_pw, &history));
 	printf("new: %s -> %d\n", curr_pw, validate_password(curr_pw, &history));
 	printf("new: %s -> %d\n", curr_pw2, validate_password(curr_pw2, &history));
-	printf("A+ %.*s|\n", 20, "=");
 	return 0;
 }

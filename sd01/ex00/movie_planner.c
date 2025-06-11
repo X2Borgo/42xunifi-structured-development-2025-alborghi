@@ -6,7 +6,7 @@
 /*   By: alborghi <alborghi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 16:58:19 by alborghi          #+#    #+#             */
-/*   Updated: 2025/06/11 17:04:47 by alborghi         ###   ########.fr       */
+/*   Updated: 2025/06/11 17:07:16 by alborghi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,25 +27,26 @@ void	free_preferences(Preference *pref)
 
 void	free_movie_list(MovieList *movie_list)
 {
-	if (movie_list)
+	if (!movie_list)
+		return;
+	if (!movie_list->movies)
 	{
-		if (movie_list->movies)
-		{
-			for (int i = 0; i < movie_list->count; i++)
-			{
-				free(movie_list->movies[i].title);
-				free(movie_list->movies[i].director);
-				if (movie_list->movies[i].genre)
-				{
-					for (int j = 0; movie_list->movies[i].genre[j]; j++)
-						free(movie_list->movies[i].genre[j]);
-				}
-				free(movie_list->movies[i].genre);
-			}
-			free(movie_list->movies);
-		}
 		free(movie_list);
+		return;
 	}
+	for (int i = 0; i < movie_list->count; i++)
+	{
+		free(movie_list->movies[i].title);
+		free(movie_list->movies[i].director);
+		if (movie_list->movies[i].genre)
+		{
+			for (int j = 0; movie_list->movies[i].genre[j]; j++)
+				free(movie_list->movies[i].genre[j]);
+		}
+		free(movie_list->movies[i].genre);
+	}
+	free(movie_list->movies);
+	free(movie_list);
 }
 
 struct Plan *create_movie_night_plan(void)

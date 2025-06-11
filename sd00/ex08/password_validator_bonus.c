@@ -6,7 +6,7 @@
 /*   By: alborghi <alborghi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 17:32:38 by alborghi          #+#    #+#             */
-/*   Updated: 2025/06/11 11:45:57 by alborghi         ###   ########.fr       */
+/*   Updated: 2025/06/11 16:28:03 by alborghi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int passcmp(const char *s1, const char *s2)
 	int	len2;
 	
 	if (!s1 || !s2)
-	return (2);
+		return (2);
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);
 	diff = (len1 > len2) ? len1 - len2 : len2 - len1;

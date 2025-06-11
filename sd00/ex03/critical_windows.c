@@ -6,7 +6,7 @@
 /*   By: alborghi <alborghi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 12:06:37 by alborghi          #+#    #+#             */
-/*   Updated: 2025/06/11 16:34:03 by alborghi         ###   ########.fr       */
+/*   Updated: 2025/06/11 16:35:41 by alborghi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,16 @@ int	count_critical_windows(const int *readings, int size)
 	int	count = 0;
 	int	average = 0;
 	int	we_win_those = 0;
-	int	skip = 0;
 
 	if (size <= 3 || readings == NULL)
 		return (0);
 	for (int i = 0; i < size; i++)
 	{
-		if (skip && (i + 1) % 5 != 0)
-			continue;
-		else if (skip)
-			skip = 0;
 		if (readings[i] > 150)
 		{
 			count = 0;
 			average = 0;
-			skip = 1;
+			i += 4 - i % 5;
 			continue;
 		}
 		if (readings[i] >= 70)

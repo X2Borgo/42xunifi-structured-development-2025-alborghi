@@ -6,20 +6,20 @@
 /*   By: alborghi <alborghi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 10:43:28 by alborghi          #+#    #+#             */
-/*   Updated: 2025/06/11 16:23:33 by alborghi         ###   ########.fr       */
+/*   Updated: 2025/06/11 16:24:34 by alborghi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "average.h"
 
-float	average(const int *arr, int size)
+float average(const int *arr, int size)
 {
-	float	sum;
-	int		div;
+	float sum;
+	int div;
 
 	sum = 0;
 	if (size <= 0 || arr == NULL)
-		return (sum / 1);
+		return (sum);
 	div = size;
 	for (int i = 0; i < size; i++)
 	{

@@ -6,7 +6,7 @@
 /*   By: alborghi <alborghi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 12:43:28 by alborghi          #+#    #+#             */
-/*   Updated: 2025/06/11 16:15:58 by alborghi         ###   ########.fr       */
+/*   Updated: 2025/06/11 16:19:56 by alborghi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ FSNode *get_sibling(const FSNode *node)
 	return node->parent->children;
 }
 
-int main(void)
+/* int main(void)
 {
 	FSNode *root = create_folder("root");
 	FSNode *file1 = create_file("file1.txt", 100);
@@ -98,4 +98,4 @@ int main(void)
 	free_filesystem(root);
 
 	return 0;
-}
+} */

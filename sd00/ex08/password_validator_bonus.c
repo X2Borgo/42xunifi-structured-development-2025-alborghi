@@ -6,7 +6,7 @@
 /*   By: alborghi <alborghi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 17:32:38 by alborghi          #+#    #+#             */
-/*   Updated: 2025/06/11 17:11:38 by alborghi         ###   ########.fr       */
+/*   Updated: 2025/06/12 10:00:32 by alborghi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,18 +45,18 @@ int passcmp(const char *s1, const char *s2)
 	return (diff);
 }
 
-void	append_password(char *new_pw, PasswordHistory *history)
+void	append_password(const char *new_pw, PasswordHistory *history)
 {
 	if (!new_pw || !history)
 		return;
 	for (int i = 2; i; i--)
 	{
 		if (history->passwords[i - 1])
-			history->passwords[i] = history->passwords[i - 1];
+			strncpy(history->passwords[i], history->passwords[i - 1], 1024);
 		else
 			break;
 	}
-	history->passwords[0] = new_pw;
+	strncpy(history->passwords[0], new_pw, 1024);
 }
 
 PwStatus validate_password(const char *new_pw, PasswordHistory *history)
@@ -68,6 +68,6 @@ PwStatus validate_password(const char *new_pw, PasswordHistory *history)
 		if (passcmp(new_pw, history->passwords[i]) < 2)
 			return INVALID_SIMILAR;
 	}
-	append_password((char *)new_pw, history);
+	append_password(new_pw, history);
 	return VALID;
 }

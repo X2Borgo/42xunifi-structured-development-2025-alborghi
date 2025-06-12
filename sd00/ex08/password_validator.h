@@ -6,7 +6,7 @@
 /*   By: alborghi <alborghi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 13:46:41 by alborghi          #+#    #+#             */
-/*   Updated: 2025/06/11 09:59:54 by alborghi         ###   ########.fr       */
+/*   Updated: 2025/06/12 09:59:21 by alborghi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ typedef enum PwStatus
 
 typedef struct PasswordHistory
 {
-	char *passwords[4];
+	char passwords[4][1024];
 }	PasswordHistory;
 
 PwStatus check_strength(const char *new_pw);

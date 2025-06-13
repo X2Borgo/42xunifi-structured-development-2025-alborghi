@@ -6,7 +6,7 @@
 /*   By: alborghi <alborghi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 12:06:37 by alborghi          #+#    #+#             */
-/*   Updated: 2025/06/13 11:42:29 by alborghi         ###   ########.fr       */
+/*   Updated: 2025/06/13 11:46:10 by alborghi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,19 @@ int count_critical_windows(const int *readings, int size)
 			average += slide_window[j];
 		}
 		printf("");
-		if (count >= 3 && average / 5 >= 90 && (j >= 5 || slide_window[j] <= 150))
+		if (count >= 3 && average / 5 >= 90 && j >= 5)
 			we_win_those++;
 		i++;
 	}
 	return we_win_those;
 }
+
+// int main(void)
+// {
+//     int readings[] = {75, 85, 95, 105, 115, 125, 135, 145, 160, 80, 90, 100, 110, 120, 130, 170, 85, 95, 155, 75};
+//     int size = sizeof(readings) / sizeof(readings[0]);
+//     int result = count_critical_windows(readings, size);
+//     printf("Number of critical windows: %d\n", result);
+//     printf("Expected: 0\n");
+//     return 0;
+// }

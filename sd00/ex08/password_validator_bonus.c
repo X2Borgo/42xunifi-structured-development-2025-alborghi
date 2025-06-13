@@ -6,7 +6,7 @@
 /*   By: alborghi <alborghi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 17:32:38 by alborghi          #+#    #+#             */
-/*   Updated: 2025/06/13 10:11:12 by alborghi         ###   ########.fr       */
+/*   Updated: 2025/06/13 11:48:04 by alborghi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int ft_strlen(const char *s)
 	return len;
 }
 
-void	ft_strncpy(char *dest, const char *src)
+void ft_strncpy(char *dest, const char *src)
 {
 	size_t i;
 
@@ -32,21 +32,26 @@ void	ft_strncpy(char *dest, const char *src)
 
 int passcmp(const char *s1, const char *s2)
 {
-	int	diff;
-	int	len1;
-	int	len2;
-	
+	int diff;
+	int len1;
+	int len2;
+	int i;
+
 	if (!s1 || !s2)
 		return 2;
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);
 	diff = (len1 > len2) ? len1 - len2 : len2 - len1;
-	for (int i = 0; i < len1 && i < len2 && diff < 2; i++)
+	i = 0;
+	while (i < len1 && i < len2 && diff < 2)
+	{
 		diff += s1[i] != s2[i];
+		i++;
+	}
 	return diff;
 }
 
-void	append_password(const char *new_pw, PasswordHistory *history)
+void append_password(const char *new_pw, PasswordHistory *history)
 {
 	if (!new_pw || !history)
 		return;

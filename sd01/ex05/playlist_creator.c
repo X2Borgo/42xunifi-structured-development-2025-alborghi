@@ -6,7 +6,7 @@
 /*   By: alborghi <alborghi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 18:05:41 by alborghi          #+#    #+#             */
-/*   Updated: 2025/06/11 18:15:40 by alborghi         ###   ########.fr       */
+/*   Updated: 2025/06/13 09:48:56 by alborghi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ struct Playlist *create_playlist(void)
 		free_mood_settings(mood);
 		return NULL;
 	}
-	if (get_mood_variations(mood))
+	int mood_variations = get_mood_variations(mood);
+	for  (int i = 0; i < mood_variations; i++)
 	{
 		filters = refine_filters(filters);
 		if (!filters)

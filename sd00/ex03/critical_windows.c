@@ -6,41 +6,50 @@
 /*   By: alborghi <alborghi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 12:06:37 by alborghi          #+#    #+#             */
-/*   Updated: 2025/06/13 09:56:37 by alborghi         ###   ########.fr       */
+/*   Updated: 2025/06/13 11:16:22 by alborghi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "critical_windows.h"
 
-int	count_critical_windows(const int *readings, int size)
+int count_critical_windows(const int *readings, int size)
 {
-	int	count = 0;
-	int	average = 0;
-	int	we_win_those = 0;
+	int count = 0;
+	int average = 0;
+	int we_win_those = 0;
+	int slide_window[5];
 
 	if (size <= 3 || readings == NULL)
 		return 0;
-	for (int i = 0; i < size; i++)
+	int i = 0;
+	int j = 0;
+	while (i < size - 4)
 	{
-		if (readings[i] > 150)
+		for (j = 0; j < 5 && i + j < size - 4; j++)
 		{
-			count = 0;
-			average = 0;
-			i += 4 - i % 5;
-			continue;
+			slide_window[j] = readings[i + j];
 		}
-		if (readings[i] >= 70)
-			count++;
-		average += readings[i];
-		if (i != 0 && i % 4 == 0)
+		for (j = 0; j < 5; j++)
 		{
-			if (count >= 3 && average / 5 >= 90)
-				we_win_those++;
-			count = 0;
-			average = 0;
+			if (slide_window[j] > 150)
+				break;
+			if (slide_window[j] >= 70)
+				count++;
+			average += slide_window[j];
 		}
+		printf("");
+		if (count >= 3 && average / 5 >= 90 && (j >= 5 || slide_window[j] <= 150))
+			we_win_those++;
+		i++;
 	}
-	if (count >= 3 && average / 5 >= 90)
-		we_win_those++;
 	return we_win_those;
+}
+
+int main(void)
+{
+	int readings[] = {75, 85, 95, 105, 115, 125, 135, 145, 160, 80, 90, 100, 110, 120, 130, 170, 85, 95, 155, 75};
+	int size = sizeof(readings) / sizeof(readings[0]);
+	int result = count_critical_windows(readings, size);
+	printf("Number of critical windows: %d\n", result);
+	return 0;
 }

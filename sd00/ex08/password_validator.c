@@ -6,7 +6,7 @@
 /*   By: alborghi <alborghi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 13:46:50 by alborghi          #+#    #+#             */
-/*   Updated: 2025/06/11 16:43:09 by alborghi         ###   ########.fr       */
+/*   Updated: 2025/06/13 10:01:59 by alborghi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,23 +51,4 @@ PwStatus check_strength(const char *new_pw)
 	if (i < 8 || !up || !low || !num || !spec)
 		return INVALID_WEAK;
 	return VALID;
-}
-
-int main(void)
-{
-	const char *curr_pw = "OldPassword1@";
-	const char *curr_pw2 = "OldPassword1@2";
-	const char *new_pw = "Password1@";
-	const char *inv_pw = "short1@";
-	const char *null_pw = NULL;
-	const char *empty_pw = "";
-	PasswordHistory history = { .passwords = {NULL, NULL, NULL, NULL} };
-
-	printf("new: %s -> %d\n", new_pw, validate_password(new_pw, &history));
-	printf("new: %s -> %d\n", inv_pw, validate_password(inv_pw, &history));
-	printf("new: %s -> %d\n", null_pw, validate_password(null_pw, &history));
-	printf("new: %s -> %d\n", empty_pw, validate_password(empty_pw, &history));
-	printf("new: %s -> %d\n", curr_pw, validate_password(curr_pw, &history));
-	printf("new: %s -> %d\n", curr_pw2, validate_password(curr_pw2, &history));
-	return 0;
 }

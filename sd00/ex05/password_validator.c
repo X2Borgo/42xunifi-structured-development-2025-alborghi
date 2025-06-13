@@ -6,7 +6,7 @@
 /*   By: alborghi <alborghi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 13:46:50 by alborghi          #+#    #+#             */
-/*   Updated: 2025/06/13 09:56:51 by alborghi         ###   ########.fr       */
+/*   Updated: 2025/06/13 10:01:00 by alborghi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_strchr(const char *s, char c)
 			return 1;
 		s++;
 	}
-	return (0);
+	return 0;
 }
 
 PwStatus validate_password(const char *new_pw, const char *curr_pw)
@@ -56,25 +56,3 @@ PwStatus validate_password(const char *new_pw, const char *curr_pw)
 		return INVALID;
 	return VALID;
 }
-
-/* int main(void)
-{
-	const char *curr_pw = "OldPassword1@";
-	const char *new_pw = "Password1@";
-	const char *invalid_pw = "short1@";
-	const char *null_pw = NULL;
-	const char *empty_pw = "";
-	const char *same_pw = "Password1@";
-
-	printf("new: %s, curr: %s -> %s\n", new_pw, curr_pw,
-		validate_password(new_pw, curr_pw) == VALID ? "VALID" : "INVALID");
-	printf("new: %s, curr: %s -> %s\n", invalid_pw, curr_pw,
-		validate_password(invalid_pw, curr_pw) == VALID ? "VALID" : "INVALID");
-	printf("new: %s, curr: %s -> %s\n", null_pw, curr_pw,
-		validate_password(null_pw, curr_pw) == VALID ? "VALID" : "INVALID");
-	printf("new: %s, curr: %s -> %s\n", empty_pw, curr_pw,
-		validate_password(empty_pw, curr_pw) == VALID ? "VALID" : "INVALID");
-	printf("new: %s, curr: %s -> %s\n", same_pw, curr_pw,
-		validate_password(same_pw, curr_pw) == VALID ? "VALID" : "INVALID");
-	return 0;
-} */

@@ -6,7 +6,7 @@
 /*   By: alborghi <alborghi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 12:43:28 by alborghi          #+#    #+#             */
-/*   Updated: 2025/06/11 16:19:56 by alborghi         ###   ########.fr       */
+/*   Updated: 2025/06/13 10:01:34 by alborghi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ FSNode *create_folder(const char *name)
 	if (!folder)
 		return NULL;
 	folder->name = strdup(name);
-	folder->size = 0; // Folders typically have size 0
-	folder->whoAmI = 1; // Indicating it's a folder
+	folder->size = 0;
+	folder->whoAmI = 1;
 	folder->parent = NULL;
 	folder->children = NULL;
 	folder->next_sibling = NULL;
@@ -71,31 +71,3 @@ FSNode *get_sibling(const FSNode *node)
 		return NULL;
 	return node->parent->children;
 }
-
-/* int main(void)
-{
-	FSNode *root = create_folder("root");
-	FSNode *file1 = create_file("file1.txt", 100);
-	FSNode *file2 = create_file("file2.txt", 200);
-	FSNode *subfolder = create_folder("subfolder");
-	FSNode *subfile1 = create_file("subfile1.txt", 50);
-	FSNode *subfile2 = create_file("subfile2.txt", 75);
-	FSNode *subsubfolder = create_folder("subsubfolder");
-	FSNode *subsubfile = create_file("subsubfile.txt", 25);
-
-	add_child(root, subfolder);
-	add_child(root, file1);
-	add_child(root, file2);
-	add_child(subfolder, subfile1);
-	add_child(subfolder, subsubfolder);
-	add_child(subfolder, subfile2);
-	add_child(subsubfolder, subsubfile);
-
-	print_structure(root, 0);
-
-	printf("Total size of the filesystem: %d bytes\n", compute_total_size(root));
-
-	free_filesystem(root);
-
-	return 0;
-} */

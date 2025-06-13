@@ -6,7 +6,7 @@
 /*   By: alborghi <alborghi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 10:43:28 by alborghi          #+#    #+#             */
-/*   Updated: 2025/06/11 16:24:34 by alborghi         ###   ########.fr       */
+/*   Updated: 2025/06/13 09:56:14 by alborghi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ float average(const int *arr, int size)
 
 	sum = 0;
 	if (size <= 0 || arr == NULL)
-		return (sum);
+		return sum;
 	div = size;
 	for (int i = 0; i < size; i++)
 	{
@@ -31,11 +31,11 @@ float average(const int *arr, int size)
 	return (sum / div);
 }
 
-int main(void)
+/* int main(void)
 {
 	int arr[] = {31, 20, 30, 40, 50};
 	int size = sizeof(arr) / sizeof(arr[0]);
 	float avg = average(arr, size);
 	printf("Average: %.2f\n", avg);
 	return 0;
-}
+} */

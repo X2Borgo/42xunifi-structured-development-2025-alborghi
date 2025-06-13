@@ -6,7 +6,7 @@
 /*   By: alborghi <alborghi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 11:32:15 by alborghi          #+#    #+#             */
-/*   Updated: 2025/06/11 16:38:51 by alborghi         ###   ########.fr       */
+/*   Updated: 2025/06/13 09:56:25 by alborghi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,5 @@ int	count_segments(const int *arr, int size)
 	}
 	if (count >= 3)
 		segments++;
-	return (segments);
+	return segments;
 }

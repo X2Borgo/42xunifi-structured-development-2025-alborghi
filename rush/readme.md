@@ -49,11 +49,6 @@ La pianificazione è soggetta ad alcuni vincoli:
 
 ``` mermaid
 graph TD
-    A[FIRST] --> B[SECOND]
-```
-
-``` mermaid
-graph TD
     A[Exam Date Planning System] --> B[Authentication Module]
     A --> C[Teaching Load Manager]
     A --> D[Date Planner Engine]

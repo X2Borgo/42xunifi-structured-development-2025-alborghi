@@ -46,6 +46,12 @@ La pianificazione è soggetta ad alcuni vincoli:
    - Date salvate e trasmesse a:
      - Scuola (pianificazione ufficiale)
      - Docente (promemoria con istruzioni modifica)
+
+``` mermaid
+graph TD
+    A[FIRST] --> B[SECOND]
+```
+
 ``` mermaid
 graph TD
     A[Exam Date Planning System] --> B[Authentication Module]

@@ -6,7 +6,7 @@
 /*   By: alborghi <alborghi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 13:46:41 by alborghi          #+#    #+#             */
-/*   Updated: 2025/06/12 09:59:21 by alborghi         ###   ########.fr       */
+/*   Updated: 2025/06/13 09:54:12 by alborghi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@
 
 #define SPECIAL "@#$%^&*"
 
+#define  MAX_LENGTH 1024
+
 typedef enum PwStatus
 {
 	VALID = 0,
@@ -28,7 +30,7 @@ typedef enum PwStatus
 
 typedef struct PasswordHistory
 {
-	char passwords[4][1024];
+	char passwords[4][MAX_LENGTH];
 }	PasswordHistory;
 
 PwStatus check_strength(const char *new_pw);

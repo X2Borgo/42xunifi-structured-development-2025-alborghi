@@ -6,7 +6,7 @@
 /*   By: alborghi <alborghi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 17:32:38 by alborghi          #+#    #+#             */
-/*   Updated: 2025/06/12 10:00:32 by alborghi         ###   ########.fr       */
+/*   Updated: 2025/06/13 09:55:00 by alborghi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,14 @@ int ft_strlen(const char *s)
 	return len;
 }
 
-int ft_strlen_r(const char *s)
+void	ft_strncpy(char *dest, const char *src)
 {
-	if (!s || !*s)
-		return 0;
-	return 1 + ft_strlen_r(s + 1);
+	size_t i;
+
+	for (i = 0; i < MAX_LENGTH && src[i] != '\0'; i++)
+		dest[i] = src[i];
+	for (; i < MAX_LENGTH; i++)
+		dest[i] = '\0';
 }
 
 // for (int i = 0; (!(i < len1) || !(i < len2)) && diff < 2; i++)
@@ -52,11 +55,11 @@ void	append_password(const char *new_pw, PasswordHistory *history)
 	for (int i = 2; i; i--)
 	{
 		if (history->passwords[i - 1])
-			strncpy(history->passwords[i], history->passwords[i - 1], 1024);
+			ft_strncpy(history->passwords[i], history->passwords[i - 1]);
 		else
 			break;
 	}
-	strncpy(history->passwords[0], new_pw, 1024);
+	ft_strncpy(history->passwords[0], new_pw);
 }
 
 PwStatus validate_password(const char *new_pw, PasswordHistory *history)

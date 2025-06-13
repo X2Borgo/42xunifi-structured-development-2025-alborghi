@@ -56,11 +56,9 @@ graph TD
     A --> F[Persistence Module]
     A --> G[Conflict Resolver]
     
-    %% Authentication Module
     B --> B1[User Login]
     B --> B2[Session Management]
     
-    %% Teaching Load Manager
     C --> C1[Course List Fetcher]
     C --> C2[Course Metadata Loader]
     C2 --> C21[Pending Dates Counter]
@@ -68,7 +66,6 @@ graph TD
     C2 --> C23[Interference Analyzer]
     C --> C3[Dashboard Renderer]
     
-    %% Date Planner Engine
     D --> D1[Date Selector]
     D --> D2[Constraints Validator]
     D2 --> D21[Minimum Dates Checker]
@@ -80,24 +77,20 @@ graph TD
     D3 --> D33[Occupation Criticality Calculator]
     D --> D4[State Manager]
     
-    %% Resource Allocator
     E --> E1[Classroom Database]
     E1 --> E11[Capacity Lookup]
     E1 --> E12[Availability Tracker]
     E --> E2[Student Enrollment Estimator]
     
-    %% Persistence Module
     F --> F1[Draft Saver]
     F --> F2[Finalizer]
     F2 --> F21[School Notifier]
     F2 --> F22[Teacher Confirmer]
     F2 --> F23[Modification Guide Generator]
     
-    %% Conflict Resolver
     G --> G1[Shared Courses Identifier]
     G --> G2[Overlap Minimizer]
     
-    %% Critical Data Flows
     D1 -->|Selected dates| D2
     D2 -->|Validation status| D1
     D1 -->|Proposed dates| D3

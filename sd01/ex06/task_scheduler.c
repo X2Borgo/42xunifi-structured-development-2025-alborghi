@@ -6,7 +6,7 @@
 /*   By: alborghi <alborghi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/12 10:07:31 by alborghi          #+#    #+#             */
-/*   Updated: 2025/06/13 09:47:02 by alborghi         ###   ########.fr       */
+/*   Updated: 2025/06/13 10:07:35 by alborghi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ struct ScheduleResult *schedule_tasks(struct TaskList *tasks)
 	}
 	ScheduleResult *result = create_schedule_result(core_count);
 	int i = 0;
-	while  (priority_map->count > 0 && i < core_count)
+	while (i < priority_map->count && i < core_count)
 	{
 		int task_id = select_best_task_for_current_priorities(profile, priority_map);
 		if (task_id < 0)

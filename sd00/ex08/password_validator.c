@@ -6,7 +6,7 @@
 /*   By: alborghi <alborghi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 13:46:50 by alborghi          #+#    #+#             */
-/*   Updated: 2025/06/13 10:01:59 by alborghi         ###   ########.fr       */
+/*   Updated: 2025/06/13 10:10:31 by alborghi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ int	ft_strchr(const char *s, char c)
 	while (*s)
 	{
 		if (*s == c)
-			return (1);
+			return 1;
 		s++;
 	}
-	return (0);
+	return 0;
 }
 
 PwStatus check_strength(const char *new_pw)

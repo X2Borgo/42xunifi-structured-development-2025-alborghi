@@ -6,7 +6,7 @@
 /*   By: alborghi <alborghi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 12:06:37 by alborghi          #+#    #+#             */
-/*   Updated: 2025/06/13 11:33:35 by alborghi         ###   ########.fr       */
+/*   Updated: 2025/06/13 11:42:29 by alborghi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int count_critical_windows(const int *readings, int size)
 		{
 			slide_window[j] = readings[i + j];
 		}
-		for (j = 0; j < 5; j++)
+		for (j = 0; j < 5 && i + j < size - 4; j++)
 		{
 			if (slide_window[j] > 150)
 				break;

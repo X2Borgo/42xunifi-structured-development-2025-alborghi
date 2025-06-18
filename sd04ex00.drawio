@@ -173,13 +173,13 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="9gbkYIBSttLyAdSKuYzu-65" value="SEARCH&lt;div&gt;BY&lt;/div&gt;&lt;div&gt;TITLE&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="-280" y="640" width="80" height="80" as="geometry" />
+          <mxGeometry x="-280" y="650" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="9gbkYIBSttLyAdSKuYzu-80" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="9gbkYIBSttLyAdSKuYzu-67" target="9gbkYIBSttLyAdSKuYzu-78">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="9gbkYIBSttLyAdSKuYzu-67" value="SEARCH&lt;div&gt;BY&lt;/div&gt;&lt;div&gt;AUTHOR&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="-120" y="640" width="80" height="80" as="geometry" />
+          <mxGeometry x="-120" y="650" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="9gbkYIBSttLyAdSKuYzu-73" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="9gbkYIBSttLyAdSKuYzu-71" target="9gbkYIBSttLyAdSKuYzu-38">
           <mxGeometry relative="1" as="geometry">
@@ -195,10 +195,10 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="9gbkYIBSttLyAdSKuYzu-78" value="SHOW RESULTS" style="whiteSpace=wrap;html=1;rounded=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="-200" y="760" width="80" height="80" as="geometry" />
+          <mxGeometry x="-200" y="770" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="9gbkYIBSttLyAdSKuYzu-81" value="EXIT" style="whiteSpace=wrap;html=1;rounded=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="-200" y="880" width="80" height="80" as="geometry" />
+          <mxGeometry x="-200" y="890" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="9gbkYIBSttLyAdSKuYzu-86" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="9gbkYIBSttLyAdSKuYzu-84" target="9gbkYIBSttLyAdSKuYzu-8">
           <mxGeometry relative="1" as="geometry" />
